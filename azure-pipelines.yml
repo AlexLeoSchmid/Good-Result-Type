@@ -50,4 +50,3 @@ steps:
   displayName: 'Create Nuget package'
   inputs:
     command: 'pack'
-    configuration: 'Release'
