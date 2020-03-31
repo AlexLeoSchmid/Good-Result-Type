@@ -26,7 +26,7 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
     - name: Generate coverage report
-      run: reportgenerator -reports:test/**/coverage.cobertura.xml -targetdir:.\CoverageReport
+      run: reportgenerator -reports:test/**/coverage.cobertura.xml -targetdir:CoverageReport
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
