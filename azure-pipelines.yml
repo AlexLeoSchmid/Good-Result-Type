@@ -45,3 +45,9 @@ steps:
     # To make the task not regenerate the report an environment variable was added to the pipeline in Azure DevOps; "disable.coverage.autogenerate: 'true'"
     # see: https://github.com/danielpalme/ReportGenerator/wiki/Integration#attention
     reportDirectory: '$(build.artifactstagingdirectory)/CoverageReport'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Create Nuget package'
+  inputs:
+    command: 'pack'
+    configuration: 'Release'
